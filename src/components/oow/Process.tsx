@@ -1,31 +1,31 @@
 const steps = [
   {
     n: "01",
-    img: "/assets/story/hero-1-planning.jpg",
+    img: "/assets/story/hero-1-planning.png",
     title: "Tú sueñas",
     desc: "Nos cuentas a dónde quieres ir y cómo quieres sentirte.",
   },
   {
     n: "02",
-    img: "/assets/story/hero-2-planning-board.jpg",
+    img: "/assets/story/hero-2-planning-board.png",
     title: "Nosotros diseñamos",
     desc: "Creamos un itinerario desde cero, hecho para ti.",
   },
   {
     n: "03",
-    img: "/assets/story/hero-3-arrival.jpg",
+    img: "/assets/story/hero-3-arrival.png",
     title: "Te recibimos",
     desc: "Estamos ahí cuando llegas. En persona.",
   },
   {
     n: "04",
-    img: "/assets/story/hero-4-snorkeling.jpg",
+    img: "/assets/story/hero-4-snorkeling.png",
     title: "Vives el viaje",
     desc: "Cada momento, curado. Nada al azar.",
   },
   {
     n: "05",
-    img: "/assets/story/hero-5-dinner.jpg",
+    img: "/assets/story/hero-5-dinner.png",
     title: "Lo recordarás siempre",
     desc: "Porque no fue un viaje. Fue una experiencia.",
   },

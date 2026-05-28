@@ -27,23 +27,12 @@ export function Nav() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
-          <a href="#top" className="flex items-center">
+          <a href="#top">
             <img
               src="/assets/logo-white.png"
               alt="One O Wander"
-              className="h-8 w-auto"
-              onError={(e) => {
-                (e.currentTarget as HTMLImageElement).style.display = "none";
-                const fallback = e.currentTarget.nextElementSibling as HTMLElement | null;
-                if (fallback) fallback.style.display = "block";
-              }}
+              className="h-[40px] w-auto"
             />
-            <span
-              className="display text-white text-lg tracking-[0.3em] hidden"
-              aria-hidden
-            >
-              ONE O WANDER
-            </span>
           </a>
 
           <nav className="hidden md:flex items-center gap-10">
