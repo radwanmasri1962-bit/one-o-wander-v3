@@ -1,29 +1,47 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Nav } from "@/components/oow/Nav";
+import { Hero } from "@/components/oow/Hero";
+import { BrandStatement, TrustStrip } from "@/components/oow/BrandStatement";
+import { Destinations } from "@/components/oow/Destinations";
+import { Process } from "@/components/oow/Process";
+import { Experiences } from "@/components/oow/Experiences";
+import { Testimonials } from "@/components/oow/Testimonials";
+import { InquiryForm } from "@/components/oow/InquiryForm";
+import { Footer } from "@/components/oow/Footer";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Your App" },
-      { name: "description", content: "Replace this with a one-sentence description of your app." },
-      { property: "og:title", content: "Your App" },
-      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
+      { title: "One O Wander · No reservas un viaje. Vives uno." },
+      {
+        name: "description",
+        content:
+          "Viajes boutique de lujo diseñados desde cero para grupos pequeños. Experiencias únicas en Estambul, París, Patagonia, Maldivas, Marruecos y más.",
+      },
+      { property: "og:title", content: "One O Wander · No reservas un viaje. Vives uno." },
+      {
+        property: "og:description",
+        content:
+          "Viajes boutique de lujo diseñados desde cero para grupos pequeños desde México.",
+      },
     ],
   }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <main className="bg-background text-body">
+      <Nav />
+      <Hero />
+      <BrandStatement />
+      <TrustStrip />
+      <Destinations />
+      <Process />
+      <Experiences />
+      <Testimonials />
+      <InquiryForm />
+      <Footer />
+    </main>
   );
 }
