@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 
 const slides = [
-  { src: "/assets/hero/marrakesh-outdoor.jpg", alt: "Marrakesh outdoor wedding sunset" },
-  { src: "/assets/hero/maldives.jpg", alt: "Maldives overwater villa sunrise" },
-  { src: "/assets/hero/kenya-safari.jpg", alt: "Kenya safari golden hour" },
-  { src: "/assets/hero/norway-fjords.jpg", alt: "Norway fjords summer" },
-  { src: "/assets/hero/sri-lanka-villa.jpg", alt: "Sri Lanka private villa" },
-  { src: "/assets/hero/greek-islands.jpg", alt: "Greek Islands day party yacht" },
-  { src: "/assets/hero/amalfi-cooking.jpg", alt: "Amalfi cooking class" },
-  { src: "/assets/hero/tokyo-night.jpg", alt: "Tokyo back street night" },
+  { src: "/assets/hero/marrakesh-outdoor.png", alt: "Marrakesh outdoor wedding sunset" },
+  { src: "/assets/hero/maldives.png", alt: "Maldives overwater villa sunrise" },
+  { src: "/assets/hero/kenya-safari.png", alt: "Kenya safari golden hour" },
+  { src: "/assets/hero/norway-fjords.png", alt: "Norway fjords summer" },
+  { src: "/assets/hero/sri-lanka-villa.png", alt: "Sri Lanka private villa" },
+  { src: "/assets/hero/greek-islands.png", alt: "Greek Islands day party yacht" },
+  { src: "/assets/hero/amalfi-cooking.png", alt: "Amalfi cooking class" },
+  { src: "/assets/hero/tokyo-night.png", alt: "Tokyo back street night" },
 ];
 
 const DURATION = 5000;
