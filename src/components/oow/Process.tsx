@@ -43,12 +43,12 @@ export function Process() {
         </div>
       </div>
 
-      <div className="overflow-x-auto no-scrollbar">
-        <div className="flex md:gap-10 gap-6 px-6 md:px-12 pb-6 md:pb-0 md:flex-row flex-col md:items-stretch">
+      <div className="px-6 md:px-12">
+        <div className="flex md:gap-10 gap-6 md:flex-row flex-col md:items-stretch">
           {steps.map((s) => (
             <article
               key={s.n}
-              className="flex-shrink-0 md:w-[320px] w-full"
+              className="flex-1 min-w-0"
             >
               <div className="flex items-end gap-4 mb-4">
                 <span
@@ -58,9 +58,11 @@ export function Process() {
                   {s.n}
                 </span>
               </div>
-              <div
-                className="w-full aspect-[4/5] bg-cover bg-center bg-navy"
-                style={{ backgroundImage: `url(${s.img})` }}
+              <img
+                src={s.img}
+                alt={s.title}
+                className="w-full aspect-video object-cover object-center bg-navy"
+                loading="lazy"
               />
               <h3 className="mt-6 font-display text-navy text-2xl">{s.title}</h3>
               <p className="mt-2 text-body text-[15px] leading-relaxed">{s.desc}</p>
