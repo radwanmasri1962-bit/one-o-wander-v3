@@ -1,9 +1,9 @@
 const destinations = [
-  { name: "Estambul", img: "/assets/destinations/istanbul.jpg", tag: "Cultural · Histórico" },
-  { name: "París", img: "/assets/destinations/paris.jpg", tag: "Romántico · Gastronómico" },
-  { name: "Sevilla", img: "/assets/destinations/sevilla.jpg", tag: "Cultural · Flamenco" },
-  { name: "Patagonia", img: "/assets/destinations/patagonia.jpg", tag: "Aventura · Naturaleza" },
-  { name: "Costa Turca", img: "/assets/destinations/turquia.jpg", tag: "Mar · Cultura" },
+  { name: "Estambul", img: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=800&q=80", tag: "Cultural · Histórico" },
+  { name: "París", img: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&q=80", tag: "Romántico · Gastronómico" },
+  { name: "Sevilla", img: "https://images.unsplash.com/photo-1559060017-445fb9722f2a?w=800&q=80", tag: "Cultural · Flamenco" },
+  { name: "Patagonia", img: "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&q=80", tag: "Aventura · Naturaleza" },
+  { name: "Costa Turca", img: "https://images.unsplash.com/photo-1527838832700-5059252407fa?w=800&q=80", tag: "Mar · Cultura" },
 ];
 
 export function Destinations() {
@@ -54,13 +54,11 @@ function Card({
       className={`group relative block overflow-hidden bg-navy ${className}`}
       style={{ aspectRatio: "4 / 3" }}
     >
-      <div
-        className="absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-[1.05]"
-        style={{
-          backgroundImage: `url(${d.img})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
+      <img
+        src={d.img}
+        alt={d.name}
+        className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.05]"
+        loading="lazy"
       />
       <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
       <div className="absolute inset-x-0 bottom-0 p-6">
