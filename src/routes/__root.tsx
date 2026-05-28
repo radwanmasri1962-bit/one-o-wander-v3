@@ -78,6 +78,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:description", content: "No reservas un viaje. Vives uno. Experiencias de viaje boutique diseñadas para grupos pequeños desde México." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "One O Wander · Viajes boutique de lujo" },
+      { name: "twitter:description", content: "No reservas un viaje. Vives uno. Experiencias de viaje boutique diseñadas para grupos pequeños desde México." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/ef9b9638-3dd9-4780-afd6-5ac535b96732/id-preview-28721528--f9e13f26-9b4a-4ad8-bfc1-7522c3b1d859.lovable.app-1779986019595.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/ef9b9638-3dd9-4780-afd6-5ac535b96732/id-preview-28721528--f9e13f26-9b4a-4ad8-bfc1-7522c3b1d859.lovable.app-1779986019595.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
