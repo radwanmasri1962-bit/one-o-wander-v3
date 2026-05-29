@@ -1,25 +1,53 @@
 export function BrandStatement() {
   return (
-    <section id="nosotros" className="bg-white py-14 md:py-16 px-6">
+    <section id="nosotros" className="bg-white px-6" style={{ paddingTop: 80, paddingBottom: 80 }}>
       <div className="max-w-3xl mx-auto text-center">
-        <div className="flex flex-col items-center">
-          <span className="font-display italic text-[120px] leading-[0.8] text-accent select-none">
-            "
-          </span>
-          <p className="font-display italic text-[32px] md:text-[38px] leading-[1.5] text-navy text-center max-w-[700px]">
-            Cada viaje, una historia que solo tú vivirás.
-          </p>
-          <span className="font-display italic text-[120px] leading-[0.8] text-accent select-none">
-            "
-          </span>
-          <p className="italic text-base text-accent mt-4">
-            — Alejandra
-          </p>
-        </div>
+        <h2
+          className="uppercase text-center"
+          style={{
+            fontFamily: '"Raleway", sans-serif',
+            fontWeight: 700,
+            fontSize: "2.2rem",
+            letterSpacing: "0.1em",
+            color: "#1E3048",
+            marginBottom: 32,
+          }}
+        >
+          Cada viaje, una historia que solo tú vivirás.
+        </h2>
+
+        <p
+          className="mx-auto text-center"
+          style={{
+            fontFamily: '"Dancing Script", cursive',
+            fontWeight: 500,
+            fontSize: "1.5rem",
+            color: "#4A6280",
+            lineHeight: 1.9,
+            maxWidth: 680,
+          }}
+        >
+          El mundo está lleno de opciones. Pero pocas personas saben realmente cómo vivirlo. En One O Wander, no vendemos paquetes. Diseñamos experiencias únicas para grupos pequeños — parejas, amigos, familias — que quieren algo más que un destino. Quieren una historia.
+        </p>
+
+        <p
+          className="text-center italic"
+          style={{
+            fontFamily: '"Raleway", sans-serif',
+            fontWeight: 300,
+            fontSize: "1rem",
+            color: "#609EE7",
+            letterSpacing: "0.08em",
+            marginTop: 24,
+          }}
+        >
+          — Alejandra
+        </p>
 
         <a
           href="#proceso"
-          className="inline-block mt-12 text-accent text-sm uppercase tracking-[0.18em] border-b border-accent pb-1 hover:opacity-80 transition-opacity"
+          className="inline-block mt-12 text-accent text-sm uppercase border-b border-accent pb-1 hover:opacity-80 transition-opacity"
+          style={{ fontFamily: '"Raleway", sans-serif', fontWeight: 600, letterSpacing: "0.12em" }}
         >
           Conoce Cómo Trabajamos
         </a>
