@@ -1,21 +1,20 @@
 export function BrandStatement() {
   return (
-    <section id="nosotros" className="bg-white py-28 md:py-32 px-6">
+    <section id="nosotros" className="bg-white py-14 md:py-16 px-6">
       <div className="max-w-3xl mx-auto text-center">
-        <h2 className="display text-navy text-[28px] md:text-[42px] leading-[1.2] font-semibold max-w-[700px] mx-auto">
-          Cada viaje, una historia que solo tú vivirás.
-        </h2>
-
-        <div className="mt-12 space-y-6 text-[17px] leading-[1.7] text-body max-w-[600px] mx-auto">
-          <p>
-            El mundo está lleno de opciones. Pero pocas personas saben realmente cómo vivirlo.
+        <div className="flex flex-col items-center">
+          <span className="font-display italic text-[120px] leading-[0.8] text-accent select-none">
+            "
+          </span>
+          <p className="font-display italic text-[32px] md:text-[38px] leading-[1.5] text-navy text-center max-w-[700px]">
+            Cada viaje, una historia que solo tú vivirás.
           </p>
-          <p>
-            En One O Wander, no vendemos paquetes. Diseñamos experiencias únicas para grupos
-            pequeños — parejas, amigos, familias — que quieren algo más que un destino. Quieren una
-            historia.
+          <span className="font-display italic text-[120px] leading-[0.8] text-accent select-none">
+            "
+          </span>
+          <p className="italic text-base text-accent mt-4">
+            — Alejandra
           </p>
-          <p>Grupos pequeños. Atención total. Presencia real.</p>
         </div>
 
         <a
