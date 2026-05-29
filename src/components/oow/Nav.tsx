@@ -46,7 +46,7 @@ export function Nav() {
               </a>
             ))}
             <a
-              href="#contacto"
+              href="/planear-mi-viaje"
               className="bg-accent hover:bg-accent/90 text-white text-[13px] uppercase tracking-[0.18em] px-6 py-3 transition-colors"
             >
               Planear mi Viaje
@@ -83,7 +83,7 @@ export function Nav() {
               </a>
             ))}
             <a
-              href="#contacto"
+              href="/planear-mi-viaje"
               onClick={() => setOpen(false)}
               className="mt-4 bg-accent text-white text-sm uppercase tracking-[0.18em] px-8 py-4"
             >
