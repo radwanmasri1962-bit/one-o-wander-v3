@@ -5,8 +5,9 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-display: "Playfair Display", serif;
-  --font-body: "DM Sans", sans-serif;
+  --font-display: "Raleway", sans-serif;
+  --font-body: "Raleway", sans-serif;
+  --font-script: "Dancing Script", cursive;
 
   --color-navy: var(--navy);
   --color-navy-deep: var(--navy-deep);
