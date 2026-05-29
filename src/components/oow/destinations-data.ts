@@ -17,75 +17,75 @@ export type Destination = {
 const U = (q: string, w = 1600) =>
   `https://source.unsplash.com/${w}x${Math.round(w * 0.66)}/?${encodeURIComponent(q)}`;
 
-// Static Unsplash images per spec
 const IMG = {
   estambul: {
-    card: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=1200&q=80",
-    hero: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?w=2000&q=80",
+    card: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=1600&q=80",
+    hero: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=1600&q=80",
     gallery: [
-      "https://images.unsplash.com/photo-1527838832700-5059252407fa?w=1200&q=80",
-      "https://images.unsplash.com/photo-1604941909480-c075e6b81b21?w=1200&q=80",
-      "https://images.unsplash.com/photo-1564507592333-c60657eea523?w=1200&q=80",
-      "https://images.unsplash.com/photo-1571406761758-9a3eed5338ef?w=1200&q=80",
-      "https://images.unsplash.com/photo-1545158539-1709fcd0fa1c?w=1200&q=80",
+      "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?w=800&q=80",
+      "https://images.unsplash.com/photo-1527838832700-5059252407fa?w=800&q=80",
+      "https://images.unsplash.com/photo-1570939274717-7eda259b50ed?w=800&q=80",
+      "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=800&q=80",
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
     ],
   },
   paris: {
-    card: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1200&q=80",
-    hero: "https://images.unsplash.com/photo-1431274172761-fca41d930114?w=2000&q=80",
+    card: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1600&q=80",
+    hero: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1600&q=80",
     gallery: [
-      "https://images.unsplash.com/photo-1543349689-9a4d426bee8e?w=1200&q=80",
-      "https://images.unsplash.com/photo-1520939817895-060bdaf4fe1b?w=1200&q=80",
-      "https://images.unsplash.com/photo-1549144511-f099e773c147?w=1200&q=80",
-      "https://images.unsplash.com/photo-1555992336-fb0d29498b13?w=1200&q=80",
-      "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=1200&q=80",
+      "https://images.unsplash.com/photo-1499856871958-5b9357976b82?w=800&q=80",
+      "https://images.unsplash.com/photo-1522093007474-d86e9bf7ba6f?w=800&q=80",
+      "https://images.unsplash.com/photo-1471623432079-b009d30b6729?w=800&q=80",
+      "https://images.unsplash.com/photo-1431274172761-fca41d930114?w=800&q=80",
+      "https://images.unsplash.com/photo-1543349689-9a4d426bee8e?w=800&q=80",
     ],
   },
   maldivas: {
-    card: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=1200&q=80",
-    hero: "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=2000&q=80",
+    card: "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=1600&q=80",
+    hero: "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=1600&q=80",
     gallery: [
-      "https://images.unsplash.com/photo-1540202404-1b927e27fa8b?w=1200&q=80",
-      "https://images.unsplash.com/photo-1586500036706-41963de24d8b?w=1200&q=80",
-      "https://images.unsplash.com/photo-1578922746465-3a80a228f223?w=1200&q=80",
-      "https://images.unsplash.com/photo-1582610116397-edb318620f90?w=1200&q=80",
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200&q=80",
+      "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=800&q=80",
+      "https://images.unsplash.com/photo-1540979388789-6cee28a1cdc9?w=800&q=80",
+      "https://images.unsplash.com/photo-1586788680434-30d324626f4c?w=800&q=80",
+      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80",
+      "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=800&q=80",
     ],
   },
   patagonia: {
-    card: "https://images.unsplash.com/photo-1531176175280-33e81dc1ad13?w=1200&q=80",
-    hero: "https://images.unsplash.com/photo-1531176175280-33e81dc1ad13?w=2000&q=80",
+    card: "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1600&q=80",
+    hero: "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1600&q=80",
     gallery: [
-      "https://images.unsplash.com/photo-1486911278844-a81c5267e227?w=1200&q=80",
-      "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=1200&q=80",
-      "https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?w=1200&q=80",
-      "https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=1200&q=80",
-      "https://images.unsplash.com/photo-1605368283278-ec7ae6b04443?w=1200&q=80",
+      "https://images.unsplash.com/photo-1531761535209-180857e963b9?w=800&q=80",
+      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80",
+      "https://images.unsplash.com/photo-1682687982107-14492010e05e?w=800&q=80",
+      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80",
+      "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=800&q=80",
     ],
   },
   japon: {
-    card: "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=1200&q=80",
-    hero: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=2000&q=80",
+    card: "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=1600&q=80",
+    hero: "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=1600&q=80",
     gallery: [
-      "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=1200&q=80",
-      "https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=1200&q=80",
-      "https://images.unsplash.com/photo-1522383225653-ed111181a951?w=1200&q=80",
-      "https://images.unsplash.com/photo-1478436127897-769e1538f1a2?w=1200&q=80",
-      "https://images.unsplash.com/photo-1570459027562-4a916cb6ee2c?w=1200&q=80",
+      "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=800&q=80",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800&q=80",
+      "https://images.unsplash.com/photo-1551641506-ee5bf4cb45f1?w=800&q=80",
+      "https://images.unsplash.com/photo-1492571350019-22de08371fd3?w=800&q=80",
+      "https://images.unsplash.com/photo-1480796927426-f609979314bd?w=800&q=80",
     ],
   },
   marruecos: {
-    card: "https://images.unsplash.com/photo-1539020140153-e479b8c5d6cf?w=1200&q=80",
-    hero: "https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=2000&q=80",
+    card: "https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=1600&q=80",
+    hero: "https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=1600&q=80",
     gallery: [
-      "https://images.unsplash.com/photo-1548013146-72479768bada?w=1200&q=80",
-      "https://images.unsplash.com/photo-1518617840859-acd13ad0356a?w=1200&q=80",
-      "https://images.unsplash.com/photo-1553244232-bdd13fe914af?w=1200&q=80",
-      "https://images.unsplash.com/photo-1539020140153-e479b8c5d6cf?w=1200&q=80",
-      "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
+      "https://images.unsplash.com/photo-1553913861-c0fddf2619ee?w=800&q=80",
+      "https://images.unsplash.com/photo-1597212720057-4d34f5c6c5e7?w=800&q=80",
+      "https://images.unsplash.com/photo-1548013146-72479768bada?w=800&q=80",
+      "https://images.unsplash.com/photo-1465056836041-7f43ac27dcb5?w=800&q=80",
+      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80",
     ],
   },
 };
+
 
 export const destinations: Record<string, Destination> = {
   estambul: {

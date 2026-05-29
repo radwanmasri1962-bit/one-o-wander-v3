@@ -203,7 +203,9 @@ function CTA({ d }: { d: Destination }) {
 }
 
 function Continue({ d }: { d: Destination }) {
-  const others = d.continueSlugs.map((s) => destinations[s]).filter(Boolean);
+  const order = ["estambul", "paris", "maldivas", "patagonia", "japon", "marruecos"];
+  const others = order.filter((s) => s !== d.slug).map((s) => destinations[s]).filter(Boolean);
+
   return (
     <section className="bg-offwhite py-24 md:py-32 px-6">
       <div className="max-w-7xl mx-auto">
