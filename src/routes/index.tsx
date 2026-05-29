@@ -1,7 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Nav } from "@/components/oow/Nav";
 import { Hero } from "@/components/oow/Hero";
+import { MiniTripBar } from "@/components/oow/MiniTripBar";
 import { BrandStatement, TrustStrip } from "@/components/oow/BrandStatement";
+import { CustomTripSection } from "@/components/oow/CustomTripSection";
 import { Destinations } from "@/components/oow/Destinations";
 import { Process } from "@/components/oow/Process";
 import { Experiences } from "@/components/oow/Experiences";
@@ -34,10 +36,12 @@ function Index() {
     <main className="bg-background text-body">
       <Nav />
       <Hero />
+      <MiniTripBar />
       <BrandStatement />
       <TrustStrip />
-      <Destinations />
+      <CustomTripSection />
       <Process />
+      <Destinations />
       <Experiences />
       <Testimonials />
       <InquiryForm />
