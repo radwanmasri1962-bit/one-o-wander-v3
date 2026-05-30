@@ -1,10 +1,8 @@
-import { Star } from "lucide-react";
-
 const testimonials = [
   {
     quote: "Alejandra lo organizó todo perfectamente. Solo tuve que aparecer y disfrutar.",
     name: "María G.",
-    route: "Cancun → Estambul",
+    route: "Cancún → Estambul",
   },
   {
     quote: "El grupo era pequeño, la atención era total. No volvería a viajar de otra manera.",
@@ -25,41 +23,104 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section className="bg-white py-24 md:py-32 px-6">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-14">
-          <p className="eyebrow">Lo Que Dicen</p>
-          <h2 className="display text-navy text-[28px] md:text-[38px] mt-3 font-semibold">
+    <section style={{ background: "white", padding: "64px 24px" }}>
+      <div style={{ maxWidth: 900, margin: "0 auto" }}>
+        <div style={{ textAlign: "center", marginBottom: 40 }}>
+          <p
+            style={{
+              fontFamily: '"Raleway", sans-serif',
+              fontWeight: 600,
+              textTransform: "uppercase",
+              letterSpacing: "0.2em",
+              fontSize: "0.65rem",
+              color: "#609EE7",
+              marginBottom: 12,
+            }}
+          >
+            Lo Que Dicen
+          </p>
+          <h2
+            style={{
+              fontFamily: '"Raleway", sans-serif',
+              fontWeight: 300,
+              fontSize: "1.8rem",
+              color: "#1E3048",
+            }}
+          >
             Viajeros que lo vivieron.
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(360px, 1fr))",
+            gap: 32,
+          }}
+        >
           {testimonials.map((t) => (
             <article
               key={t.name}
-              className="border border-hairline p-8 md:p-10 bg-offwhite/50"
+              style={{
+                background: "white",
+                border: "1px solid #D6E4F0",
+                borderRadius: 4,
+                padding: 32,
+              }}
             >
-              <div className="font-display text-accent text-6xl leading-none">“</div>
-              <p className="mt-2 font-body italic text-body text-[16px] leading-[1.7]">
+              <span
+                style={{
+                  display: "block",
+                  fontFamily: '"Raleway", sans-serif',
+                  fontWeight: 300,
+                  fontSize: "2.5rem",
+                  lineHeight: 0,
+                  color: "#609EE7",
+                  marginBottom: 12,
+                  marginTop: 12,
+                }}
+              >
+                “
+              </span>
+              <p
+                style={{
+                  fontFamily: '"Raleway", sans-serif',
+                  fontWeight: 300,
+                  fontSize: "0.95rem",
+                  color: "#4A6280",
+                  lineHeight: 1.8,
+                  fontStyle: "italic",
+                  margin: 0,
+                }}
+              >
                 {t.quote}
               </p>
-              <div className="mt-6 font-body font-bold text-navy text-[14px]">
-                {t.name} <span className="font-normal text-muted-ink">· {t.route}</span>
+              <div
+                style={{
+                  fontFamily: '"Raleway", sans-serif',
+                  fontWeight: 400,
+                  fontSize: "0.75rem",
+                  color: "#1E3048",
+                  textTransform: "uppercase",
+                  letterSpacing: "0.1em",
+                  marginTop: 20,
+                }}
+              >
+                {t.name}
+              </div>
+              <div
+                style={{
+                  fontFamily: '"Raleway", sans-serif',
+                  fontWeight: 300,
+                  fontSize: "0.72rem",
+                  color: "#8AA4BF",
+                  marginTop: 4,
+                }}
+              >
+                {t.route}
               </div>
             </article>
           ))}
-        </div>
-
-        <div className="mt-14 flex flex-col items-center gap-2">
-          <div className="flex gap-1 text-[#E8B339]">
-            {Array.from({ length: 5 }).map((_, i) => (
-              <Star key={i} className="w-5 h-5 fill-current" />
-            ))}
-          </div>
-          <p className="text-[12px] uppercase tracking-[0.2em] text-muted-ink">
-            Experiencias verificadas
-          </p>
         </div>
       </div>
     </section>
