@@ -1,16 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "@tanstack/react-router";
+import { WORLD_DESTINATION_GROUPS, SURPRISE_OPTION } from "./world-destinations";
 
-const destinos = [
-  "Sorpréndeme",
-  "Estambul",
-  "París",
-  "Maldivas",
-  "Patagonia",
-  "Japón",
-  "Marruecos",
-  "Otro destino",
-];
+
 const meses = [
   "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
   "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre",
