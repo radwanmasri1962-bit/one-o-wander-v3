@@ -3,12 +3,12 @@ import { Nav } from "@/components/oow/Nav";
 import { Hero } from "@/components/oow/Hero";
 import { MiniTripBar } from "@/components/oow/MiniTripBar";
 import { BrandStatement, TrustStrip } from "@/components/oow/BrandStatement";
-import { CustomTripSection } from "@/components/oow/CustomTripSection";
+import { RivieraMayaSection } from "@/components/oow/RivieraMayaSection";
 import { Destinations } from "@/components/oow/Destinations";
 import { Process } from "@/components/oow/Process";
 import { Experiences } from "@/components/oow/Experiences";
 import { Testimonials } from "@/components/oow/Testimonials";
-import { InquiryForm } from "@/components/oow/InquiryForm";
+import { CtaBlock } from "@/components/oow/CtaBlock";
 import { Footer } from "@/components/oow/Footer";
 
 export const Route = createFileRoute("/")({
@@ -36,15 +36,15 @@ function Index() {
     <main className="bg-background text-body">
       <Nav />
       <Hero />
-      <MiniTripBar />
       <BrandStatement />
       <TrustStrip />
-      <CustomTripSection />
       <Process />
+      <MiniTripBar />
+      <RivieraMayaSection />
       <Destinations />
       <Experiences />
       <Testimonials />
-      <InquiryForm />
+      <CtaBlock />
       <Footer />
     </main>
   );

@@ -57,12 +57,6 @@ export function Hero() {
           >
             Explorar Destinos
           </a>
-          <a
-            href="#contacto"
-            className="bg-accent text-white text-[13px] uppercase tracking-[0.2em] px-8 py-4 hover:bg-accent/90 transition-colors"
-          >
-            Planear mi Viaje
-          </a>
         </div>
       </div>
 

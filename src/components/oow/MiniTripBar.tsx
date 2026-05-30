@@ -1,16 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "@tanstack/react-router";
+import { WORLD_DESTINATION_GROUPS, SURPRISE_OPTION } from "./world-destinations";
 
-const destinos = [
-  "Sorpréndeme",
-  "Estambul",
-  "París",
-  "Maldivas",
-  "Patagonia",
-  "Japón",
-  "Marruecos",
-  "Otro destino",
-];
+
 const meses = [
   "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
   "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre",
@@ -90,7 +82,12 @@ export function MiniTripBar() {
           <span style={labelStyle}>Destino</span>
           <select value={destination} onChange={(e) => setDestination(e.target.value)} style={inputStyle}>
             <option value="">Selecciona</option>
-            {destinos.map((d) => <option key={d}>{d}</option>)}
+            {WORLD_DESTINATION_GROUPS.map((g) => (
+              <optgroup key={g.label} label={g.label}>
+                {g.options.map((o) => <option key={g.label + o} value={o}>{o}</option>)}
+              </optgroup>
+            ))}
+            <option value={SURPRISE_OPTION}>{SURPRISE_OPTION}</option>
           </select>
         </div>
 

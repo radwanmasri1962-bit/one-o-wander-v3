@@ -19,11 +19,12 @@ export function BrandStatement() {
         <p
           className="mx-auto text-center"
           style={{
-            fontFamily: '"Dancing Script", cursive',
-            fontWeight: 500,
-            fontSize: "1.5rem",
+            fontFamily: '"Cormorant", serif',
+            fontStyle: "italic",
+            fontWeight: 400,
+            fontSize: "1.6rem",
             color: "#4A6280",
-            lineHeight: 1.9,
+            lineHeight: 1.8,
             maxWidth: 680,
           }}
         >
