@@ -1,9 +1,15 @@
 export function BrandStatement() {
   return (
     <section id="nosotros" className="bg-white px-6" style={{ paddingTop: 80, paddingBottom: 80 }}>
+      <style>{`
+        @media (max-width: 768px) {
+          .brand-headline { font-size: 1.5rem !important; margin-bottom: 24px !important; }
+          .brand-body { font-size: 1.15rem !important; }
+        }
+      `}</style>
       <div className="max-w-3xl mx-auto text-center">
         <h2
-          className="uppercase text-center"
+          className="uppercase text-center brand-headline"
           style={{
             fontFamily: '"Raleway", sans-serif',
             fontWeight: 700,
@@ -17,7 +23,7 @@ export function BrandStatement() {
         </h2>
 
         <p
-          className="mx-auto text-center"
+          className="mx-auto text-center brand-body"
           style={{
             fontFamily: '"Cormorant", serif',
             fontStyle: "italic",

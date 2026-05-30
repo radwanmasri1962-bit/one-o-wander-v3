@@ -43,8 +43,14 @@ export function CtaBlock() {
     <section
       id="contacto"
       style={{ background: "#1E3048", padding: "100px 40px" }}
-      className="text-center"
+      className="text-center cta-block"
     >
+      <style>{`
+        @media (max-width: 768px) {
+          .cta-block { padding: 64px 24px !important; }
+          .cta-block h2 { font-size: 1.6rem !important; }
+        }
+      `}</style>
       <p style={label}>— COMENZAR</p>
       <h2 style={headline}>¿Lista para vivir tu próximo viaje?</h2>
       <p style={subtext}>Cuéntanos tu sueño. Alejandra se encarga del resto.</p>
