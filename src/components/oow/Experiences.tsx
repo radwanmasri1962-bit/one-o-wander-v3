@@ -1,11 +1,9 @@
-const GH = "https://raw.githubusercontent.com/radwanmasri1962-bit/one-o-wander-v3/main/public/assets/experiencias";
-
 const items = [
-  { title: "Escapadas en Grupo", img: `${GH}/Escapadas_en_Grupo.jpg` },
-  { title: "Lunas de Miel", img: `${GH}/Luna_De_Miel.jpg` },
-  { title: "Bodas y Celebraciones", img: `${GH}/Bodas_y_Celebraciones.jpg` },
-  { title: "Aventura y Naturaleza", img: `${GH}/Aventura_y_Naturaleza.jpg` },
-  { title: "Gastronomía y Cultura", img: `${GH}/Gastrongmi_a_y_Cultura.jpg` },
+  { title: "Escapadas en Grupo", img: "/assets/experiencias/Escapadas_en_Grupo.jpg" },
+  { title: "Lunas de Miel", img: "/assets/experiencias/Luna_De_Miel.jpg" },
+  { title: "Bodas y Celebraciones", img: "/assets/experiencias/Bodas_y_Celebraciones.jpg" },
+  { title: "Aventura y Naturaleza", img: "/assets/experiencias/Aventura_y_Naturaleza.jpg" },
+  { title: "Gastronomía y Cultura", img: "/assets/experiencias/Gastronomia_y_Cultura.jpg" },
 ];
 
 export function Experiences() {
