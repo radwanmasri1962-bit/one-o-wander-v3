@@ -51,16 +51,30 @@ export function MiniTripBar() {
   };
 
   return (
-    <div
-      className="relative z-10 mx-auto px-4"
-      style={{ marginTop: -40, maxWidth: 1000 }}
-    >
-      <div
-        className="bg-white"
+    <div style={{ background: "#F7F9FC", padding: "48px 24px" }}>
+      <p
         style={{
-          boxShadow: "0 4px 24px rgba(0,0,0,0.10)",
+          fontFamily: '"Raleway", sans-serif',
+          fontWeight: 400,
+          textTransform: "uppercase",
+          letterSpacing: "0.2em",
+          fontSize: "0.7rem",
+          color: "#609EE7",
+          textAlign: "center",
+          marginBottom: 16,
+        }}
+      >
+        ¿Listo para diseñar tu viaje?
+      </p>
+      <div
+        style={{
+          background: "white",
+          boxShadow: "0 8px 40px rgba(30,48,72,0.15)",
+          border: "1px solid #D6E4F0",
           borderRadius: 4,
-          padding: "20px 32px",
+          padding: "24px 32px",
+          maxWidth: 960,
+          margin: "0 auto",
           display: "grid",
           gridTemplateColumns: "1.2fr 1fr 1.3fr 0.8fr auto",
           alignItems: "stretch",
