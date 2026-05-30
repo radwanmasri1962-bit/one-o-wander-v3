@@ -151,7 +151,7 @@ export function RivieraMayaSection() {
           DESCUBRE NUESTRA RIVIERA MAYA →
         </Link>
         <img
-          src={encodeURI("/assets/Riviera Maya Logo Dark Background.png")}
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Riviera_Maya_logo.svg/320px-Riviera_Maya_logo.svg.png"
           alt="Riviera Maya"
           style={{
             position: "absolute",
