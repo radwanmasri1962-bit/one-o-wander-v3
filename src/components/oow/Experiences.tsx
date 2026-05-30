@@ -1,9 +1,11 @@
+const GH = "https://raw.githubusercontent.com/radwanmasri1962-bit/one-o-wander-v3/main/public/assets/experiencias";
+
 const items = [
-  { title: "Escapadas en Grupo", img: "/assets/experiences/greek-islands.jpg" },
-  { title: "Lunas de Miel", img: "/assets/experiences/maldives.jpg" },
-  { title: "Bodas y Celebraciones", img: "/assets/experiences/marrakesh-outdoor.jpg" },
-  { title: "Aventura y Naturaleza", img: "/assets/experiences/kenya-safari.jpg" },
-  { title: "Gastronomía y Cultura", img: "/assets/experiences/amalfi-cooking.jpg" },
+  { title: "Escapadas en Grupo", img: `${GH}/Escapadas_en_Grupo.jpg` },
+  { title: "Lunas de Miel", img: `${GH}/Luna_De_Miel.jpg` },
+  { title: "Bodas y Celebraciones", img: `${GH}/Bodas_y_Celebraciones.jpg` },
+  { title: "Aventura y Naturaleza", img: `${GH}/Aventura_y_Naturaleza.jpg` },
+  { title: "Gastronomía y Cultura", img: `${GH}/Gastrongmi_a_y_Cultura.jpg` },
 ];
 
 export function Experiences() {
@@ -15,31 +17,35 @@ export function Experiences() {
         </h2>
       </div>
 
-      <div className="mt-14 overflow-x-auto no-scrollbar">
-        <div className="flex gap-5 px-6 md:px-12 min-w-min">
-          {items.map((it) => (
-            <article
-              key={it.title}
-              className="group relative flex-shrink-0 h-[420px] w-[300px] overflow-hidden bg-navy"
-            >
-              <div
-                className="absolute inset-0 transition-transform duration-700 group-hover:scale-105"
-                style={{
-                  backgroundImage: `url(${it.img})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/20 transition-opacity group-hover:from-black/90" />
-              <div className="absolute inset-0 flex flex-col justify-end p-7">
-                <h3 className="font-display text-white text-2xl tracking-wide">{it.title}</h3>
-                <span className="mt-3 text-accent text-[12px] uppercase tracking-[0.2em] opacity-0 group-hover:opacity-100 transition-opacity">
-                  Explorar →
-                </span>
-              </div>
-            </article>
-          ))}
-        </div>
+      <div
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "center",
+          gap: 16,
+          maxWidth: 1200,
+          margin: "56px auto 0",
+          padding: "0 24px",
+        }}
+      >
+        {items.map((it) => (
+          <article
+            key={it.title}
+            style={{
+              width: 220,
+              height: 320,
+              borderRadius: 4,
+              overflow: "hidden",
+              flexShrink: 0,
+            }}
+          >
+            <img
+              src={it.img}
+              alt={it.title}
+              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+            />
+          </article>
+        ))}
       </div>
     </section>
   );

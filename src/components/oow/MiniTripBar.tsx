@@ -51,7 +51,7 @@ export function MiniTripBar() {
   };
 
   return (
-    <div style={{ background: "#F7F9FC", padding: "48px 24px" }}>
+    <div style={{ background: "#F7F9FC", padding: "16px 24px 48px" }}>
       <p
         style={{
           fontFamily: '"Raleway", sans-serif',
