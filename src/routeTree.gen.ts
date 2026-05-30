@@ -59,12 +59,7 @@ export interface FileRouteTypes {
   fullPaths: '/' | '/planear-mi-viaje' | '/riviera-maya' | '/destinos/$slug'
   fileRoutesByTo: FileRoutesByTo
   to: '/' | '/planear-mi-viaje' | '/riviera-maya' | '/destinos/$slug'
-  id:
-    | '__root__'
-    | '/'
-    | '/planear-mi-viaje'
-    | '/riviera-maya'
-    | '/destinos/$slug'
+  id: '__root__' | '/' | '/planear-mi-viaje' | '/riviera-maya' | '/destinos/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
