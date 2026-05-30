@@ -1,20 +1,73 @@
 import { Link } from "@tanstack/react-router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
+const CAROUSEL_IMAGES = [
+  "/assets/riviera-maya/Hotel%20Room%20Luxury.jpg",
+  "/assets/riviera-maya/The%20Cenote.jpg",
+  "/assets/riviera-maya/Tulum%20Mayan_2.jpg",
+  "/assets/riviera-maya/Family%20Inside%20Pool.jpg",
+  "/assets/riviera-maya/Artisan%20Market.jpg",
+  "/assets/riviera-maya/Water%20Scooter%20Pyramid.jpg",
+];
+
+function RivieraCarousel() {
+  const [active, setActive] = useState(0);
+  useEffect(() => {
+    const t = setInterval(() => setActive((i) => (i + 1) % CAROUSEL_IMAGES.length), 4000);
+    return () => clearInterval(t);
+  }, []);
+  return (
+    <div style={{ position: "relative", width: "100%", height: "100%", minHeight: 520, overflow: "hidden" }}>
+      {CAROUSEL_IMAGES.map((src, i) => (
+        <div
+          key={src}
+          style={{
+            position: "absolute",
+            inset: 0,
+            backgroundImage: `linear-gradient(to bottom, rgba(15,30,46,0.15), rgba(15,30,46,0.45)), url(${src})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            opacity: i === active ? 1 : 0,
+            transition: "opacity 800ms ease-in-out",
+          }}
+          aria-hidden={i !== active}
+        />
+      ))}
+      <div
+        style={{
+          position: "absolute",
+          bottom: 20,
+          left: 0,
+          right: 0,
+          display: "flex",
+          justifyContent: "center",
+          gap: 8,
+          zIndex: 2,
+        }}
+      >
+        {CAROUSEL_IMAGES.map((_, i) => (
+          <span
+            key={i}
+            style={{
+              display: "inline-block",
+              height: 6,
+              width: i === active ? 20 : 6,
+              background: i === active ? "white" : "rgba(255,255,255,0.4)",
+              borderRadius: i === active ? 100 : "50%",
+              transition: "all 300ms ease",
+            }}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export function RivieraMayaSection() {
   const [hover, setHover] = useState(false);
   return (
     <section style={{ minHeight: 520 }} className="grid grid-cols-1 md:grid-cols-2">
-      <div
-        style={{
-          backgroundImage:
-            "url(https://images.unsplash.com/photo-1552074284-5e88ef1aef18?w=900&q=80)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          minHeight: 520,
-        }}
-        aria-label="Riviera Maya"
-      />
+      <RivieraCarousel />
       <div
         style={{ background: "#0F1E2E", padding: "80px 64px" }}
         className="flex flex-col justify-center"
