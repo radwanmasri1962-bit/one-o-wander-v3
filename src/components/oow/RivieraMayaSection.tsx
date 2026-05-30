@@ -1,16 +1,14 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 
-const GH_BASE = "https://raw.githubusercontent.com/radwanmasri1962-bit/one-o-wander-v3/main/public/assets/riviera-maya";
-
 const CAROUSEL_IMAGES = [
-  `${GH_BASE}/Hotel_Room_Luxury.jpg`,
-  `${GH_BASE}/The_Cenote.jpg`,
-  `${GH_BASE}/Tulum_Mayan_2.jpg`,
-  `${GH_BASE}/Family_Inside_Pool.jpg`,
-  `${GH_BASE}/Artisan_Market.jpg`,
-  `${GH_BASE}/Water_Scooter_Pyramid.jpg`,
-];
+  "/assets/riviera-maya/Hotel Room Luxury.jpg",
+  "/assets/riviera-maya/The Cenote.jpg",
+  "/assets/riviera-maya/Tulum Mayan_2.jpg",
+  "/assets/riviera-maya/Family Inside Pool.jpg",
+  "/assets/riviera-maya/Artisan Market.jpg",
+  "/assets/riviera-maya/Water Scooter Pyramid.jpg",
+].map(encodeURI);
 
 function RivieraCarousel() {
   const [active, setActive] = useState(0);
