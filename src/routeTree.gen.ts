@@ -9,10 +9,16 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as RivieraMayaRouteImport } from './routes/riviera-maya'
 import { Route as PlanearMiViajeRouteImport } from './routes/planear-mi-viaje'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as DestinosSlugRouteImport } from './routes/destinos.$slug'
 
+const RivieraMayaRoute = RivieraMayaRouteImport.update({
+  id: '/riviera-maya',
+  path: '/riviera-maya',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PlanearMiViajeRoute = PlanearMiViajeRouteImport.update({
   id: '/planear-mi-viaje',
   path: '/planear-mi-viaje',
@@ -32,35 +38,51 @@ const DestinosSlugRoute = DestinosSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/planear-mi-viaje': typeof PlanearMiViajeRoute
+  '/riviera-maya': typeof RivieraMayaRoute
   '/destinos/$slug': typeof DestinosSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/planear-mi-viaje': typeof PlanearMiViajeRoute
+  '/riviera-maya': typeof RivieraMayaRoute
   '/destinos/$slug': typeof DestinosSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/planear-mi-viaje': typeof PlanearMiViajeRoute
+  '/riviera-maya': typeof RivieraMayaRoute
   '/destinos/$slug': typeof DestinosSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/planear-mi-viaje' | '/destinos/$slug'
+  fullPaths: '/' | '/planear-mi-viaje' | '/riviera-maya' | '/destinos/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/planear-mi-viaje' | '/destinos/$slug'
-  id: '__root__' | '/' | '/planear-mi-viaje' | '/destinos/$slug'
+  to: '/' | '/planear-mi-viaje' | '/riviera-maya' | '/destinos/$slug'
+  id:
+    | '__root__'
+    | '/'
+    | '/planear-mi-viaje'
+    | '/riviera-maya'
+    | '/destinos/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   PlanearMiViajeRoute: typeof PlanearMiViajeRoute
+  RivieraMayaRoute: typeof RivieraMayaRoute
   DestinosSlugRoute: typeof DestinosSlugRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/riviera-maya': {
+      id: '/riviera-maya'
+      path: '/riviera-maya'
+      fullPath: '/riviera-maya'
+      preLoaderRoute: typeof RivieraMayaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/planear-mi-viaje': {
       id: '/planear-mi-viaje'
       path: '/planear-mi-viaje'
@@ -88,8 +110,19 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   PlanearMiViajeRoute: PlanearMiViajeRoute,
+  RivieraMayaRoute: RivieraMayaRoute,
   DestinosSlugRoute: DestinosSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
