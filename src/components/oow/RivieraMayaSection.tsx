@@ -66,11 +66,18 @@ function RivieraCarousel() {
 export function RivieraMayaSection() {
   const [hover, setHover] = useState(false);
   return (
-    <section style={{ minHeight: 520 }} className="grid grid-cols-1 md:grid-cols-2">
+    <section style={{ minHeight: 520 }} className="grid grid-cols-1 md:grid-cols-2 riviera-section">
+      <style>{`
+        @media (max-width: 768px) {
+          .riviera-section .riviera-content { padding: 56px 24px !important; }
+          .riviera-section .riviera-logo { width: 140px !important; bottom: 16px !important; right: 16px !important; }
+          .riviera-section .riviera-headline { font-size: 1.7rem !important; }
+        }
+      `}</style>
       <RivieraCarousel />
       <div
         style={{ background: "#0F1E2E", padding: "80px 64px", position: "relative" }}
-        className="flex flex-col justify-center"
+        className="flex flex-col justify-center riviera-content"
       >
         <p
           style={{
@@ -86,6 +93,7 @@ export function RivieraMayaSection() {
           RIVIERA MAYA · CANCÚN
         </p>
         <h2
+          className="riviera-headline"
           style={{
             fontFamily: '"Raleway", sans-serif',
             fontWeight: 300,
@@ -153,6 +161,7 @@ export function RivieraMayaSection() {
         <img
           src="/assets/riviera-maya/Riviera_Maya_Logo_Dark_Background.jpg"
           alt="Riviera Maya"
+          className="riviera-logo"
           style={{
             position: "absolute",
             bottom: 32,

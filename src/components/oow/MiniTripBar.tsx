@@ -52,6 +52,25 @@ export function MiniTripBar() {
 
   return (
     <div style={{ background: "#F7F9FC", padding: "16px 24px 48px" }}>
+      <style>{`
+        @media (max-width: 768px) {
+          .mini-trip-bar {
+            grid-template-columns: 1fr !important;
+            padding: 20px !important;
+          }
+          .mini-trip-bar > div {
+            padding: 12px 0 !important;
+            border-right: none !important;
+            border-bottom: 1px solid #D6E4F0;
+          }
+          .mini-trip-bar > div:last-of-type { border-bottom: none; }
+          .mini-trip-bar > button {
+            margin-left: 0 !important;
+            margin-top: 16px;
+            width: 100%;
+          }
+        }
+      `}</style>
       <p
         style={{
           fontFamily: '"Raleway", sans-serif',
@@ -67,6 +86,7 @@ export function MiniTripBar() {
         ¿Listo para diseñar tu viaje?
       </p>
       <div
+        className="mini-trip-bar"
         style={{
           background: "white",
           boxShadow: "0 8px 40px rgba(30,48,72,0.15)",

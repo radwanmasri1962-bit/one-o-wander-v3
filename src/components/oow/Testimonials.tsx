@@ -23,7 +23,15 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section style={{ background: "white", padding: "80px 40px" }}>
+    <section className="testimonials-section" style={{ background: "white", padding: "80px 40px" }}>
+      <style>{`
+        @media (max-width: 768px) {
+          .testimonials-section { padding: 56px 20px !important; }
+          .testimonials-grid { grid-template-columns: 1fr !important; gap: 16px !important; }
+          .testimonials-heading { font-size: 1.5rem !important; margin-bottom: 32px !important; }
+          .testimonials-card { padding: 24px !important; }
+        }
+      `}</style>
       <div style={{ maxWidth: 1100, margin: "0 auto" }}>
         <p
           style={{
@@ -40,6 +48,7 @@ export function Testimonials() {
           LO QUE DICEN
         </p>
         <h2
+          className="testimonials-heading"
           style={{
             fontFamily: '"Raleway", sans-serif',
             fontWeight: 300,
@@ -53,6 +62,7 @@ export function Testimonials() {
         </h2>
 
         <div
+          className="testimonials-grid"
           style={{
             display: "grid",
             gridTemplateColumns: "1fr 1fr",
@@ -62,6 +72,7 @@ export function Testimonials() {
           {testimonials.map((t) => (
             <article
               key={t.name}
+              className="testimonials-card"
               style={{
                 background: "#F7F9FC",
                 border: "1px solid #D6E4F0",

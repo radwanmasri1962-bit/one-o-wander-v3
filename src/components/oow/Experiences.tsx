@@ -15,19 +15,31 @@ export function Experiences() {
         </h2>
       </div>
 
-      <div
-        style={{
-          display: "flex",
-          flexWrap: "nowrap",
-          flexDirection: "row",
-          justifyContent: "center",
-          alignItems: "stretch",
-          gap: 16,
-          maxWidth: 1200,
-          margin: "56px auto 0",
-          padding: "0 24px",
-        }}
-      >
+      <div className="exp-scroll">
+        <style>{`
+          .exp-scroll {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: stretch;
+            gap: 16px;
+            max-width: 1200px;
+            margin: 56px auto 0;
+            padding: 0 24px;
+          }
+          @media (max-width: 768px) {
+            .exp-scroll {
+              justify-content: flex-start;
+              overflow-x: auto;
+              scroll-snap-type: x mandatory;
+              -webkit-overflow-scrolling: touch;
+              padding: 0 24px 8px;
+            }
+            .exp-scroll > article { scroll-snap-align: start; }
+          }
+          .exp-scroll::-webkit-scrollbar { display: none; }
+          .exp-scroll { scrollbar-width: none; }
+        `}</style>
         {items.map((it) => (
           <article
             key={it.title}
