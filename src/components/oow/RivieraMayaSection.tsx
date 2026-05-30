@@ -1,16 +1,14 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 
-const GH_BASE = "https://raw.githubusercontent.com/radwanmasri1962-bit/one-o-wander-v3/main/public/assets/riviera-maya";
-
 const CAROUSEL_IMAGES = [
-  `${GH_BASE}/Hotel_Room_Luxury.jpg`,
-  `${GH_BASE}/The_Cenote.jpg`,
-  `${GH_BASE}/Tulum_Mayan_2.jpg`,
-  `${GH_BASE}/Family_Inside_Pool.jpg`,
-  `${GH_BASE}/Artisan_Market.jpg`,
-  `${GH_BASE}/Water_Scooter_Pyramid.jpg`,
-];
+  "/assets/riviera-maya/Hotel Room Luxury.jpg",
+  "/assets/riviera-maya/The Cenote.jpg",
+  "/assets/riviera-maya/Tulum Mayan_2.jpg",
+  "/assets/riviera-maya/Family Inside Pool.jpg",
+  "/assets/riviera-maya/Artisan Market.jpg",
+  "/assets/riviera-maya/Water Scooter Pyramid.jpg",
+].map(encodeURI);
 
 function RivieraCarousel() {
   const [active, setActive] = useState(0);
@@ -153,13 +151,15 @@ export function RivieraMayaSection() {
           DESCUBRE NUESTRA RIVIERA MAYA →
         </Link>
         <img
-          src="https://raw.githubusercontent.com/radwanmasri1962-bit/one-o-wander-v3/main/public/assets/Riviera%20Maya%20Logo%20Dark%20Background.jpg"
+          src={encodeURI("/assets/Riviera Maya Logo Dark Background.jpg")}
           alt="Riviera Maya"
           style={{
             position: "absolute",
             bottom: 28,
             right: 32,
-            width: 120,
+            width: 160,
+            minWidth: 120,
+            height: "auto",
             objectFit: "contain",
             borderRadius: 8,
             background: "transparent",
