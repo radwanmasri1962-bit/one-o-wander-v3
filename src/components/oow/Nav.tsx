@@ -31,7 +31,7 @@ export function Nav() {
             <img
               src="/assets/logo-white.png"
               alt="One O Wander"
-              className="h-[40px] w-auto"
+              className="h-[60px] w-auto"
             />
           </a>
 
