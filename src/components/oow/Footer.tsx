@@ -61,8 +61,16 @@ function SocialIcon({ href, children }: { href: string; children: React.ReactNod
 export function Footer() {
   return (
     <footer style={{ background: "#0F1E2E", color: "white" }}>
+      <style>{`
+        @media (max-width: 768px) {
+          .footer-row1 { padding: 48px 24px 32px !important; gap: 32px !important; }
+          .footer-row2 { padding: 20px 24px !important; }
+          .footer-copyright { padding: 0 20px 20px !important; }
+        }
+      `}</style>
       {/* Row 1 */}
       <div
+        className="footer-row1"
         style={{
           padding: "64px 80px 40px",
           borderBottom: "1px solid rgba(255,255,255,0.08)",
@@ -154,6 +162,7 @@ export function Footer() {
 
       {/* Row 2 */}
       <div
+        className="footer-row2"
         style={{
           padding: "24px 80px",
           borderTop: "1px solid rgba(255,255,255,0.08)",
@@ -165,9 +174,9 @@ export function Footer() {
       >
         <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
           <img
-            src="https://raw.githubusercontent.com/radwanmasri1962-bit/one-o-wander-v3/main/public/assets/2.svg"
+            src="/assets/jara-logo.png"
             alt="JARA AI"
-            style={{ height: 32, marginRight: 10 }}
+            style={{ width: 100, height: "auto", marginRight: 10 }}
           />
           <span
             style={{
@@ -214,6 +223,7 @@ export function Footer() {
 
       {/* Copyright */}
       <p
+        className="footer-copyright"
         style={{
           textAlign: "center",
           fontFamily: '"Raleway", sans-serif',
