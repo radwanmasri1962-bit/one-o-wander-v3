@@ -153,15 +153,17 @@ export function RivieraMayaSection() {
           DESCUBRE NUESTRA RIVIERA MAYA →
         </Link>
         <img
-          src="https://raw.githubusercontent.com/radwanmasri1962-bit/one-o-wander-v3/main/public/assets/Riviera%20Maya%20Logo%20Vector.jpg"
+          src="https://raw.githubusercontent.com/radwanmasri1962-bit/one-o-wander-v3/main/public/assets/Riviera%20Maya%20Logo%20Dark%20Background.jpg"
           alt="Riviera Maya"
           style={{
             position: "absolute",
             bottom: 28,
             right: 32,
             width: 120,
-            opacity: 0.85,
             objectFit: "contain",
+            borderRadius: 8,
+            background: "transparent",
+            border: "none",
           }}
         />
       </div>
