@@ -2,13 +2,13 @@ import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 
 const CAROUSEL_IMAGES = [
-  "/assets/riviera-maya/Hotel Room Luxury.jpg",
-  "/assets/riviera-maya/The Cenote.jpg",
-  "/assets/riviera-maya/Tulum Mayan_2.jpg",
-  "/assets/riviera-maya/Family Inside Pool.jpg",
-  "/assets/riviera-maya/Artisan Market.jpg",
-  "/assets/riviera-maya/Water Scooter Pyramid.jpg",
-].map(encodeURI);
+  "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?w=1200",
+  "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200",
+  "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200",
+  "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200",
+  "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=1200",
+  "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=1200",
+];
 
 function RivieraCarousel() {
   const [active, setActive] = useState(0);
@@ -151,7 +151,7 @@ export function RivieraMayaSection() {
           DESCUBRE NUESTRA RIVIERA MAYA →
         </Link>
         <img
-          src={encodeURI("/assets/Riviera Maya Logo Dark Background.png")}
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Riviera_Maya_logo.svg/320px-Riviera_Maya_logo.svg.png"
           alt="Riviera Maya"
           style={{
             position: "absolute",
