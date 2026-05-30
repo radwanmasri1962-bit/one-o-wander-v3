@@ -151,21 +151,21 @@ export function RivieraMayaSection() {
           DESCUBRE NUESTRA RIVIERA MAYA →
         </Link>
         <img
-          src={encodeURI("/assets/Riviera Maya Logo Dark Background.jpg")}
+          src={encodeURI("/assets/Riviera Maya Logo Dark Background.png")}
           alt="Riviera Maya"
           style={{
             position: "absolute",
-            bottom: 28,
+            bottom: 32,
             right: 32,
-            width: 160,
-            minWidth: 120,
+            width: 180,
             height: "auto",
             objectFit: "contain",
-            borderRadius: 8,
+            padding: 12,
             background: "transparent",
             border: "none",
           }}
         />
+
       </div>
     </section>
   );
