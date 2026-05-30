@@ -164,7 +164,11 @@ export function Footer() {
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
-          <img src={`${GH}/2.svg`} alt="JARA AI" style={{ height: 28 }} />
+          <img
+            src="https://raw.githubusercontent.com/radwanmasri1962-bit/one-o-wander-v3/main/public/assets/2.svg"
+            alt="JARA AI"
+            style={{ height: 32, marginRight: 10 }}
+          />
           <span
             style={{
               fontFamily: '"Raleway", sans-serif',
@@ -177,7 +181,11 @@ export function Footer() {
           </span>
         </div>
         <div style={{ display: "flex", alignItems: "center", gap: 16, marginLeft: "auto" }}>
-          <img src={`${GH}/rnt-logo.png`} alt="RNT" style={{ height: 28 }} />
+          <img
+            src="https://raw.githubusercontent.com/radwanmasri1962-bit/one-o-wander-v3/main/public/assets/rnt-logo.png"
+            alt="RNT"
+            style={{ height: 32, marginRight: 10 }}
+          />
           <div
             style={{
               fontFamily: '"Raleway", sans-serif',

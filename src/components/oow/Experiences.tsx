@@ -20,8 +20,10 @@ export function Experiences() {
       <div
         style={{
           display: "flex",
-          flexWrap: "wrap",
+          flexWrap: "nowrap",
+          flexDirection: "row",
           justifyContent: "center",
+          alignItems: "stretch",
           gap: 16,
           maxWidth: 1200,
           margin: "56px auto 0",
@@ -32,11 +34,12 @@ export function Experiences() {
           <article
             key={it.title}
             style={{
-              width: 220,
-              height: 320,
-              borderRadius: 4,
+              flex: "0 0 200px",
+              width: 200,
+              height: 300,
+              borderRadius: 8,
               overflow: "hidden",
-              flexShrink: 0,
+              position: "relative",
             }}
           >
             <img
