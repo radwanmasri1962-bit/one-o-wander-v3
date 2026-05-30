@@ -1,13 +1,15 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 
+const GH_BASE = "https://raw.githubusercontent.com/radwanmasri1962-bit/one-o-wander-v3/main/public/assets/riviera-maya";
+
 const CAROUSEL_IMAGES = [
-  "/assets/riviera-maya/Hotel%20Room%20Luxury.jpg",
-  "/assets/riviera-maya/The%20Cenote.jpg",
-  "/assets/riviera-maya/Tulum%20Mayan_2.jpg",
-  "/assets/riviera-maya/Family%20Inside%20Pool.jpg",
-  "/assets/riviera-maya/Artisan%20Market.jpg",
-  "/assets/riviera-maya/Water%20Scooter%20Pyramid.jpg",
+  `${GH_BASE}/Hotel_Room_Luxury.jpg`,
+  `${GH_BASE}/The_Cenote.jpg`,
+  `${GH_BASE}/Tulum_Mayan_2.jpg`,
+  `${GH_BASE}/Family_Inside_Pool.jpg`,
+  `${GH_BASE}/Artisan_Market.jpg`,
+  `${GH_BASE}/Water_Scooter_Pyramid.jpg`,
 ];
 
 function RivieraCarousel() {
@@ -69,7 +71,7 @@ export function RivieraMayaSection() {
     <section style={{ minHeight: 520 }} className="grid grid-cols-1 md:grid-cols-2">
       <RivieraCarousel />
       <div
-        style={{ background: "#0F1E2E", padding: "80px 64px" }}
+        style={{ background: "#0F1E2E", padding: "80px 64px", position: "relative" }}
         className="flex flex-col justify-center"
       >
         <p
@@ -150,6 +152,18 @@ export function RivieraMayaSection() {
         >
           DESCUBRE NUESTRA RIVIERA MAYA →
         </Link>
+        <img
+          src="https://raw.githubusercontent.com/radwanmasri1962-bit/one-o-wander-v3/main/public/assets/Riviera%20Maya%20Logo%20Vector.jpg"
+          alt="Riviera Maya"
+          style={{
+            position: "absolute",
+            bottom: 28,
+            right: 32,
+            width: 120,
+            opacity: 0.85,
+            objectFit: "contain",
+          }}
+        />
       </div>
     </section>
   );
